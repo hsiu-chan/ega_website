@@ -1,0 +1,5 @@
+{
+    "title": "Jinja 渲染示範頁",
+    "heading": "這是從 Jinja 生成的 GitHub Pages",
+    "items": ["項目 A", "項目 B", "項目 C"]
+}
