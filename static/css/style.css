@@ -12,3 +12,46 @@ h1,h2,h3{color:var(--primary)}
 .little{
   color: var(--muted)!important;
 }
+
+
+.feature-card {
+  position: relative;
+  overflow: hidden;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card .card-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.5s ease;
+  z-index: 0;
+}
+
+.feature-card .card-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.3);
+  transition: background 0.3s ease;
+  z-index: 0;
+}
+
+.feature-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.3);
+}
+
+.feature-card:hover .card-bg {
+  transform: scale(1.1);
+}
+
+.feature-card:hover .card-overlay {
+  background: rgba(0,0,0,0.15);
+}
+
+.feature-card{
+  height: 10rem!important;
+}

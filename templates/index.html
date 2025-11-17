@@ -13,5 +13,30 @@
   <div class="col-lg-6 ps-lg-5 text-center">
     <img src="{{ hero_img }}" alt="診所" class="img-fluid rounded shadow-lg">
   </div>
+  
+
+
+
+
+</section>
+<section class="container py-5">
+  <h2 class="text-primary fw-bold mb-4">診所特色與設備</h2>
+<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+    {% for item in features %}
+    <div class="col-12 col-md-12 col-lg-6">
+      <div class="card bg-dark text-white shadow-sm feature-card h-100">
+        <!-- 背景圖 -->
+        <div class="card-bg" style="background-image: url('{{ item.img }}');"></div>
+        <!-- 半透明遮罩 -->
+        <div class="card-overlay"></div>
+        <!-- 文字內容 -->
+        <div class="card-body position-relative z-1">
+          <h5 class="card-title text-white">{{ item.title }}</h5>
+          <p class="card-text">{{ item.desc }}</p>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
 </section>
 {% endblock %}

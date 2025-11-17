@@ -29,7 +29,8 @@ for filename, ctx in pages.items():
         "business_hours": config.get("business_hours", ""),
         "hero_img":config.get("hero_img",""),
         "doctors": config.get("doctors", []),
-        "services": config.get("services", [])
+        "services": config.get("services", []),
+        "features": config.get("features",[])
         
     }
     output = tpl.render(**merged_ctx)

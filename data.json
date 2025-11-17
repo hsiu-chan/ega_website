@@ -25,5 +25,23 @@
     "about.html": { "title": "關於我們 - 依均安牙醫診所" },
     "services.html": { "title": "診療項目 - 依均安牙醫診所" },
     "contact.html": { "title": "聯絡 / 預約 - 依均安牙醫診所" }
-  }
+  },
+  "features":
+  [
+    {
+      "title": "iTero 3D 掃描",
+      "desc": "數位口掃，快速精準，免傳統印模的不適。",
+      "img": "static/img/itero.webp"
+    },
+    {
+      "title": "植牙精密導航",
+      "desc": "採用 CBCT 與導板技術，提升植牙安全性與準確度。",
+      "img": "static/img/implant.jpg"
+    },
+    {
+      "title": "飛碟",
+      "desc": "宇宙科技支援",
+      "img": "static/img/ufo.jpg"
+    }
+  ]
 }
