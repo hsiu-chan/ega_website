@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+{% block content %}
+<h2 class="text-primary">聯絡 / 預約</h2>
+<div class="row">
+  <div class="col-md-6">
+    <h5>診所資訊</h5>
+    <p>地址：{{ address }}</p>
+    <p>電話：<a href="tel:048375818">04-8375-818</a></p>
+    <p>營業時間：</p>
+    <div class="container py-5">
+  <h2 class="text-primary mb-4">營業時間</h2>
+  <div class="table-responsive">
+    <table class="table table-bordered text-center align-middle">
+      <thead class="table-light">
+        <tr>
+          <th>時段</th>
+          <th>一</th>
+          <th>二</th>
+          <th>三</th>
+          <th>四</th>
+          <th>五</th>
+          <th>六</th>
+          <th>日</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>上午 <br><p class="little">09:00 - 12:00<p></td>
+          <td>✔️</td>
+          <td>✔️</td>
+          <td>✔️</td>
+          <td>✔️</td>
+          <td>✔️</td>
+          <td>✔️</td>
+          <td>❌</td>
+        </tr>
+        <tr>
+          <td>下午 <br><p class="little">14:00 - 18:30</p></td>
+          <td>✔️</td>
+          <td>✔️</td>
+          <td>✔️</td>
+          <td>✔️</td>
+          <td>✔️</td>
+          <td>✔️ <br>(-17:00)</td>
+          <td>❌</td>
+        </tr>
+        <tr>
+          <td>晚上 <br><p class="little">19:00 - 21:30</p></td>
+          <td>✔️</td>
+          <td>✔️</td>
+          <td>✔️</td>
+          <td>✔️</td>
+          <td>✔️</td>
+          <td>❌</td>
+          <td>❌</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+    <hr>
+    
+  </div>
+  <div class="col-md-6">
+    <h5 class="mb-3">線上預約</h5>
+
+    
+    <form id="appointmentForm" action="https://formspree.io/f/xjkjdqra" method="POST" class="row g-2">
+      <div class="col-12">
+        <label class="form-label">姓名<input class="form-control" name="name" required></label>
+      </div>
+      <div class="col-12">
+        <label class="form-label">電話<input class="form-control" name="phone" pattern="[0-9+\-\\s]+" required></label>
+      </div>
+      <div class="col-12">
+        <label class="form-label">電子信箱<input class="form-control" type="email" name="_replyto"></label>
+      </div>
+      <div class="col-12">
+        <label class="form-label">欲預約日期<input class="form-control" type="date" name="date" required></label>
+      </div>
+      <div class="col-12">
+        <label class="form-label">備註<textarea class="form-control" name="message" rows="3"></textarea></label>
+      </div>
+      <div class="col-12 d-flex gap-2">
+        <button type="submit" class="btn btn-primary">送出預約</button>
+        <button type="reset" class="btn btn-outline-secondary">重填</button>
+      </div>
+      <div class="col-12">
+        <div id="formResult" class="mt-2" role="status" aria-live="polite"></div>
+      </div>
+    </form>
+
+    <hr>
+
+    <h6>Google 表單</h6>
+    <!-- 範例：將 <iframe> 的 src 替換為你的 Google Forms 發佈後取得的 URL -->
+    <div class="ratio ratio-16x9">
+      <iframe src="https://docs.google.com/forms/d/e/YOUR_GOOGLE_FORM_ID/viewform?embedded=true" title="Google Form"></iframe>
+    </div>
+
+  </div>
+</div>
+{% endblock %}

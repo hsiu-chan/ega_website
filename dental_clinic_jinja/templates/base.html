@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="專業牙科診所 — 定期檢查、矯正、植牙、美白等完整牙科服務" />
+  <title>{{ title or "安心牙醫診所" }}</title>
+
+  <!-- Bootstrap 5 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="static/css/style.css" />
+</head>
+<body class="d-flex flex-column min-vh-100">
+  <header class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-primary" href="index.html">{{ clinic_name or "安心牙醫診所" }}</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMain">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">首頁</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">關於我們</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">診療項目</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">聯絡 / 預約</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-fill">
+    <div class="container py-5">
+      {% block content %}{% endblock %}
+    </div>
+  </main>
+
+  <footer class="bg-light text-center py-3">
+    <div class="container">
+      <small>© {{ current_year or "2025" }} {{ clinic_name or "安心牙醫診所" }}。All rights reserved.</small>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="static/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block content %}
+<h2 class="text-primary">關於我們</h2>
+<p>我們致力於提供最專業、最貼心的牙科照護。團隊專長：植牙、矯正、兒童牙科、根管治療與美學牙科。</p>
+{% for doctor in doctors %}
+<div class="card mb-3 w-100">
+  <div class="row g-0 align-items-center">
+    <!-- 左邊文字 -->
+    <div class="col-md-6">
+      <div class="card-body">
+        <h5 class="card-title">{{ doctor.name }}</h5>
+        <p class="card-text">{{ doctor.title }}</p>
+        <ul>
+          <li>中山醫學大學 牙醫學系 博士</li>
+          <li>中山醫學大學 矯正研究所 碩士</li>
+          <li>中華民國植牙醫學會 專科醫師</li>
+          <li>台灣牙周補綴醫學會 專科醫師</li>
+          <li>中華民國國際矯正學會 專科醫師</li>
+          <li>台灣牙醫植體醫學會 理事</li>
+          <li>台灣牙醫植體醫學會 進階植牙專科醫師</li>
+          <li>台灣口腔矯正醫學會 會員</li>
+          <li>ITI 國際植牙學會 會員</li>
+          <li>美國波士頓醫大植牙專科訓練</li>
+          <li>德國法蘭克福醫大植牙專科訓練</li>
+        </ul>
+      </div>
+    </div>
+    <!-- 右邊圖片 -->
+    <div class="col-md-6">
+      <img src="{{ doctor.img }}" class="card-img-top" alt="醫師">
+    </div>
+  </div>
+</div>
+{% endfor %}
+
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,14 @@
+:root{
+  --primary: #1e73be;
+  --muted: #6c757d;
+  --bg: #f8fbff;
+  --card: #ffffff;
+}
+body{background:var(--bg);font-family: 'Noto Sans TC', system-ui, -apple-system, 'Helvetica Neue', Arial;}
+.navbar-brand{color:var(--primary) !important}
+h1,h2,h3{color:var(--primary)}
+.btn-primary{background:var(--primary);border-color:var(--primary)}
+.card{border-radius:12px}
+.little{
+  color: var(--muted)!important;
+}
